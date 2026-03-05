@@ -72,7 +72,7 @@ input, select {
 
 /* Botões de Ação na Área da Foto */
 .btn-action {
-    background-color: #6c757d; /* Cor cinza para esses botões */
+    background-color: #bb5320; /* Cor cinza para esses botões */
     color: white; /* Texto branco */
     padding: 8px 15px; /* Espaçamento interno */
     border: none; /* Sem borda */
@@ -99,7 +99,7 @@ button:not(.btn-action) { /* Seleciona APENAS os botões que NÃO são de ação
     padding: 12px; /* Espaçamento interno maior */
     border: none; /* Sem borda */
     border-radius: 8px; /* Cantos arredondados */
-    color: white; /* Texto branco */
+    color: rgb(11, 1, 1); /* Texto branco */
     font-weight: bold; /* Texto em negrito */
     cursor: pointer; /* Indica que é clicável */
     transition: transform 0.2s; /* Animação ao clicar */
