@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    display: flex;
+    width: 900px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Lado do Formulário */
+.login-box {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Animação dos Botões */
+.btn-animated {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #00bcd4; /* Cor ciano da logo */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-animated:hover {
+    background: #008ba3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.btn-animated:active {
+    transform: translateY(0);
+}
+
+/* Lado da Imagem */
+.image-box {
+    flex: 1.2;
+    background: #00bcd4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column-reverse;
+        width: 95%;
+        margin: 20px;
+    }
+    .image-box {
+        padding: 20px;
+    }
+}

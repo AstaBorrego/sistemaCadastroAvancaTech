@@ -112,7 +112,8 @@ window.login = function () {
     signInWithEmailAndPassword(auth, email, password)
         .then(() => {
             // SE DEU CERTO: Manda o usuário para a página inicial (home)
-            window.location.href = "home.html";
+            // window.location.href = "home.html";
+            window.location.href = "menu.html";
         })
         .catch(error => {
             // SE DEU ERRO: Mostra um alerta explicando o que aconteceu de errado
