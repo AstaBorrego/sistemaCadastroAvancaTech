@@ -1,0 +1,113 @@
+/* Estilo Geral: Foco no Conforto Visual */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte amigável */
+    background-color: #f0f2f5; /* Cor de fundo suave */
+    display: flex; /* Para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    padding: 20px; /* Espaço nas bordas */
+}
+
+.container {
+    background: white; /* Fundo branco para o formulário */
+    padding: 30px; /* Espaço interno do formulário */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra suave para destacar */
+    max-width: 500px; /* Largura máxima para não ficar gigante */
+    width: 100%; /* Ocupa toda a largura disponível */
+}
+
+h1 {
+    text-align: center; /* Título centralizado */
+    color: #333; /* Cor escura para o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Campos de Texto (agrupados em blocos) */
+fieldset {
+    border: 2px solid #e1e4e8; /* Borda para agrupar campos */
+    border-radius: 10px; /* Bordas arredondadas para os grupos */
+    margin-bottom: 20px; /* Espaço entre os grupos */
+    padding: 15px; /* Espaço interno dos grupos */
+}
+
+legend {
+    font-weight: bold; /* Título do grupo em negrito */
+    color: #555; /* Cor do título do grupo */
+    padding: 0 10px; /* Espaço ao redor do título do grupo */
+}
+
+label {
+    display: block; /* Cada label em uma nova linha */
+    margin-top: 10px; /* Espaço acima do label */
+    font-weight: 600; /* Texto do label mais forte */
+    color: #444; /* Cor do label */
+}
+
+input, select {
+    width: 100%; /* Ocupa 100% da largura do pai */
+    padding: 10px; /* Espaço interno dos campos */
+    margin-top: 5px; /* Espaço acima dos campos */
+    border: 1px solid #ccc; /* Borda dos campos */
+    border-radius: 8px; /* Bordas arredondadas dos campos */
+    box-sizing: border-box; /* Garante que padding e borda não aumentem a largura */
+}
+
+/* Área da Foto: CENTRALIZADA e BEM VISÍVEL */
+.photo-upload-area {
+    text-align: center; /* Centraliza os itens dentro dessa área */
+    margin-bottom: 20px; /* Espaço abaixo da área da foto */
+    padding: 15px; /* Espaço interno */
+    border: 1px dashed #a0a0a0; /* Borda tracejada para indicar uma área especial */
+    border-radius: 10px; /* Cantos arredondados */
+}
+
+.profile-pic {
+    width: 150px; /* Tamanho da imagem de pré-visualização */
+    height: 150px; /* Altura da imagem de pré-visualização */
+    border-radius: 50%; /* Faz a imagem ficar redonda */
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    margin-bottom: 10px; /* Espaço abaixo da imagem */
+    border: 3px solid #007bff; /* Borda colorida para destacar a foto */
+}
+
+/* Botões de Ação na Área da Foto */
+.btn-action {
+    background-color: #6c757d; /* Cor cinza para esses botões */
+    color: white; /* Texto branco */
+    padding: 8px 15px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Indica que é clicável */
+    margin: 5px; /* Espaço entre eles */
+    transition: background-color 0.3s; /* Animação ao passar o mouse */
+}
+
+.btn-action:hover {
+    background-color: #5a6268; /* Cor mais escura ao passar o mouse */
+}
+
+
+/* Grupo de Botões Principais (CRUD) */
+.button-group {
+    display: grid; /* Organiza os botões em grade */
+    grid-template-columns: 1fr 1fr; /* 2 botões por linha, com tamanhos iguais */
+    gap: 10px; /* Espaço entre os botões */
+    margin-top: 20px; /* Espaço acima do grupo de botões */
+}
+
+button:not(.btn-action) { /* Seleciona APENAS os botões que NÃO são de ação (os de CRUD) */
+    padding: 12px; /* Espaçamento interno maior */
+    border: none; /* Sem borda */
+    border-radius: 8px; /* Cantos arredondados */
+    color: white; /* Texto branco */
+    font-weight: bold; /* Texto em negrito */
+    cursor: pointer; /* Indica que é clicável */
+    transition: transform 0.2s; /* Animação ao clicar */
+}
+
+button:active { transform: scale(0.95); } /* Botão "encolhe" um pouco ao ser clicado */
+
+.btn-cadastrar { background-color: #28a745; } /* Verde para "Cadastrar" (positivo) */
+.btn-consultar { background-color: #007bff; } /* Azul para "Consultar" (informação) */
+.btn-alterar   { background-color: #ffc107; color: #333; } /* Amarelo para "Alterar" (atenção) */
+.btn-deletar   { background-color: #dc3545; } /* Vermelho para "Deletar" (perigo) */

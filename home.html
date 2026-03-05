@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>👩🏽‍🎓Cadastro Aluno</title>
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="shortcut icon" href="./img/avancatech.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <h1>⌨️ Cadastro de Aluno 👨🏿‍🎓🧑🏼‍🎓👩🏽‍🎓</h1>
+
+        <form id="studentForm">
+            <fieldset>
+                <legend>Dados do Aluno</legend>
+                <div class="photo-container">
+                    <img id="previewFoto" src="https://via.placeholder.com/150" class="profile-pic">
+                    <button type="button" onclick="document.getElementById('uploadFoto').click()">Upload Foto</button>
+                    <button type="button" onclick="abrirCamera()">Tirar Foto</button>
+                    <input type="file" id="uploadFoto" accept="image/*" style="display: none;">
+
+                    <video id="videoCamera" autoplay playsinline style="display:none;"></video>
+                    <button type="button" id="btnCapturar" style="display:none;" onclick="capturarFoto()">Capturar
+                        Foto</button>
+                </div>
+
+                <label>RG:</label>
+                <input type="text" id="rg" placeholder="00.000.000-0" oninput="mascaraRG(this)">
+
+                <label>Nome Completo:</label>
+                <input type="text" id="nome">
+            </fieldset>
+
+            <fieldset>
+                <legend>Contato e Responsável</legend>
+
+                <label>Nome do Responsável:</label>
+                <input type="text" id="responsavel" placeholder="Nome do pai, mãe ou tutor">
+
+                <label>CEP:</label>
+                <input type="text" id="cep" placeholder="00000-000" maxlength="9" oninput="mascaraCEP(this)"
+                    onblur="buscarEndereco()">
+
+                <label>Endereço Residencial (Rua):</label>
+                <input type="text" id="endereco" placeholder="Rua, número, bairro">
+
+                <label>Bairro:</label>
+                <input type="text" id="bairro">
+
+                <div class="row">
+                    <div>
+                        <label>Cidade:</label>
+                        <input type="text" id="cidade">
+                    </div>
+                    <div>
+                        <label>UF:</label>
+                        <input type="text" id="estado" style="width: 50px;">
+                    </div>
+                </div>
+
+                <label>Telefone de Contato:</label>
+                <input type="tel" id="telefone" oninput="maskTelefone(this)" placeholder="(00) 00000-0000">
+
+                <label>E-mail do Responsável:</label>
+                <input type="email" id="emailResponsavel" placeholder="responsavel@email.com">
+            </fieldset>
+
+            <div class="button-group">
+                <button type="button" class="btn-cadastrar" onclick="cadastrar()">Cadastrar</button>
+
+                <button type="button" class="btn-consultar" onclick="consultar()">Consultar</button>
+
+                <button type="button" class="btn-alterar" onclick="alterar()">Alterar</button>
+
+                <button type="button" class="btn-deletar" onclick="deletar()">Deletar</button>
+            </div>
+        </form>
+    </div>
+    <script type="module" src="./js/home.js"></script>
+</body>
+
+</html>

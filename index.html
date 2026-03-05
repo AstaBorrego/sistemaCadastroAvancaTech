@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧑🏼‍🎓 Controle de Alunos 👨🏿‍🎓</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+<body>
+    <form>
+        <div>
+            <label>Email Corporativo</label>
+            <input type="email" id="email" oninput="validateFields()" placeholder="A.Vancatechu@itinovacao.org.br" />
+            <div id="email-required-error" class="erro">Email é obrigatório</div>
+            <div id="email-invalid-error" class="erro">E-mail inválido</div>
+        </div>
+
+        <div>
+            <label>Senha</label>
+            <input type="password" id="password" oninput="validateFields()" placeholder="Senha" />
+            <div id="password-required-error" class="erro">Senha é obrigatória</div>
+        </div>
+
+        <div>
+            <button type="button" id="entrar" disabled onclick="login()">Entrar</button>
+        </div>
+
+        <!-- <div>
+            <button type="button" id="recover-password-button" disabled onclick="recoverPassword()">Esqueci a senha</button>
+        </div>
+
+        <div>
+            <button type="button" id="register-button" disabled onclick="register()">Cadastrar novo</button>
+        </div>
+    </form> -->
+
+    <script type="module" src="./js/script.js"></script>
+</body>
+</html>

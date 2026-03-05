@@ -1,0 +1,51 @@
+body {
+    background-color: #74f412de; /* Define a cor de fundo (um verde vibrante) */
+    display: flex;               /* Ativa o "modo caixa mágica" para alinhar tudo */
+    justify-content: center;     /* Centraliza o conteúdo horizontalmente (esquerda/direita) */
+    align-items: center;         /* Centraliza o conteúdo verticalmente (cima/baixo) */
+    height: 100vh;               /* Faz o corpo ocupar 100% da altura da tela visível */
+    margin: 0;                   /* Remove bordas brancas chatas que vêm por padrão */
+    font-family: sans-serif;     /* Usa uma fonte limpa, sem aqueles "pezinhos" nas letras */
+}
+
+form {
+    width: 300px;                /* Define uma largura fixa para o formulário não esticar demais */
+}
+
+input, button {
+    padding: 10px;               /* Dá um respiro interno (o texto não encosta na borda) */
+    margin-bottom: 10px;         /* Cria um espaço entre um elemento e o de baixo */
+    width: 100%;                 /* Faz com que ocupem toda a largura do formulário */
+    box-sizing: border-box;      /* Garante que o padding não "expulse" o elemento para fora da caixa */
+}
+
+button {
+    cursor: pointer;             /* Mostra a "mãozinha" quando passamos o mouse (avisa que é clicável) */
+    background: #ffffff;         /* Fundo branco no botão */
+    border: none;                /* Tira aquela borda padrão cinza e feia */
+    color: #f60c0c;              /* Cor do texto do botão (vermelho) */
+    font-weight: bold;           /* Deixa a letra gordinha/negrito */
+    border-radius: 4px;          /* Arredonda levemente as pontas do botão */
+    transition: opacity 0.3s;    /* Faz qualquer mudança de cor/transparência ser suave, não brusca */
+}
+
+/* Estado desabilitado (quando o botão está "congelado") */
+button:disabled {
+    opacity: 0.5;                /* Fica meio transparente */
+    cursor: not-allowed;         /* Mostra o ícone de "proibido" no mouse */
+    background-color: #eee;      /* Fica com um cinza clarinho de "desligado" */
+}
+
+/* Efeito de clique (apenas se não estiver desabilitado) */
+button:active:not(:disabled) {
+    opacity: 0.8;                /* Dá uma leve "piscada" quando você clica */
+}
+
+.erro {
+    color: white;                /* Letra branca */
+    background-color: red;       /* Fundo vermelho de alerta */
+    display: none;               /* Fica invisível por padrão (só aparece via JavaScript) */
+    font-size: 12px;             /* Letra pequena para não gritar tanto */
+    padding: 2px 5px;            /* Espaçamento interno pequeno */
+    margin-bottom: 10px;         /* Afasta do próximo elemento */
+}
